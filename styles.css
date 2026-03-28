@@ -1,0 +1,180 @@
+:root {
+  --bg: #f5f8ff;
+  --card: #ffffff;
+  --text: #1f2937;
+  --muted: #5f6b7c;
+  --accent: #4465f2;
+  --line: #dbe3ff;
+  --shadow: 0 10px 30px rgba(68, 101, 242, 0.12);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  color: var(--text);
+  background: radial-gradient(circle at top right, #ebf0ff 0%, var(--bg) 40%, #f9fbff 100%);
+  line-height: 1.6;
+}
+
+.container {
+  width: min(1100px, 92vw);
+  margin: 0 auto;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 2rem;
+  align-items: center;
+  padding: 4rem 0 2rem;
+}
+
+.eyebrow {
+  display: inline-block;
+  margin: 0 0 0.8rem;
+  padding: 0.25rem 0.7rem;
+  border-radius: 999px;
+  background: #eaf0ff;
+  color: var(--accent);
+  font-weight: 600;
+  font-size: 0.86rem;
+}
+
+h1,
+h2,
+h3 {
+  margin-top: 0;
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: clamp(2rem, 4vw, 3.15rem);
+  margin-bottom: 0.8rem;
+}
+
+.hero__description {
+  margin: 0;
+  color: var(--muted);
+  max-width: 600px;
+}
+
+.hero__contact {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  margin-top: 1.4rem;
+}
+
+.hero__contact a {
+  text-decoration: none;
+  color: #1b3cc8;
+  font-weight: 600;
+  background: #eef2ff;
+  border: 1px solid var(--line);
+  border-radius: 0.8rem;
+  padding: 0.55rem 0.85rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.hero__contact a:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow);
+}
+
+.pfp-card {
+  background: var(--card);
+  border: 1px solid #e8edff;
+  border-radius: 1.2rem;
+  padding: 1.4rem;
+  box-shadow: var(--shadow);
+}
+
+.pfp-placeholder {
+  aspect-ratio: 1 / 1;
+  width: min(100%, 300px);
+  margin: 0 auto;
+  border-radius: 1rem;
+  border: 2px dashed #bcccff;
+  background: linear-gradient(160deg, #f8faff 20%, #eff4ff 100%);
+  display: grid;
+  place-items: center;
+  text-align: center;
+  color: var(--muted);
+  font-weight: 600;
+}
+
+.section {
+  margin: 2.4rem 0;
+}
+
+.section h2 {
+  margin-bottom: 1rem;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap: 0.8rem;
+}
+
+.skills-grid span {
+  padding: 0.65rem 0.8rem;
+  border-radius: 0.8rem;
+  background: var(--card);
+  border: 1px solid var(--line);
+  box-shadow: 0 6px 16px rgba(63, 87, 173, 0.08);
+  text-align: center;
+  font-weight: 500;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.project-card {
+  background: var(--card);
+  border: 1px solid #e3e9ff;
+  border-radius: 1rem;
+  padding: 1.1rem;
+  box-shadow: 0 10px 24px rgba(59, 84, 177, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 32px rgba(59, 84, 177, 0.16);
+}
+
+.project-card p {
+  color: var(--muted);
+  margin: 0.65rem 0 1rem;
+}
+
+.project-card a {
+  text-decoration: none;
+  font-weight: 600;
+  color: #2644ca;
+}
+
+.footer {
+  padding: 1.4rem 0 2.2rem;
+  color: var(--muted);
+  text-align: center;
+}
+
+@media (max-width: 860px) {
+  .hero {
+    grid-template-columns: 1fr;
+    padding-top: 2.8rem;
+  }
+
+  .pfp-card {
+    max-width: 360px;
+  }
+}
