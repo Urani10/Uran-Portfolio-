@@ -93,18 +93,14 @@ h1 {
   box-shadow: var(--shadow);
 }
 
-.pfp-placeholder {
+.pfp-image {
   aspect-ratio: 1 / 1;
   width: min(100%, 300px);
   margin: 0 auto;
   border-radius: 1rem;
-  border: 2px dashed #bcccff;
-  background: linear-gradient(160deg, #f8faff 20%, #eff4ff 100%);
-  display: grid;
-  place-items: center;
-  text-align: center;
-  color: var(--muted);
-  font-weight: 600;
+  display: block;
+  object-fit: cover;
+  border: 1px solid #d9e4ff;
 }
 
 .section {
